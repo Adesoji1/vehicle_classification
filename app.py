@@ -51,6 +51,7 @@ async def predict_image(file: UploadFile):
 # Set the page configuration
 st.set_page_config(
     page_title="Vehicle Image Classification",
+    layout="wide",
     
 )
 
@@ -93,3 +94,6 @@ if uploaded_file is not None:
     else:
         st.error(f"Error: Request failed with status code {response.status_code}")
         st.error(f"Response content: {response.content}")
+        
+if __name__ == '__main__':
+    app.run()
